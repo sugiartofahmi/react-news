@@ -1,3 +1,5 @@
+import { lazy } from "react";
+const Search = lazy(() => import("../Search"));
 const Navbar = () => {
   return (
     <nav className=" md:px-5 px-3 bg-[#232339] w-full md:h-[15vh] h-[10vh] items-center justify-center">
@@ -7,6 +9,7 @@ const Navbar = () => {
           src="/ami-news-logo.png"
           alt="ami-news-logo"
         />
+        <Search />
       </div>
     </nav>
   );
