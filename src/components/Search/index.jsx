@@ -3,7 +3,7 @@ import { useRecoilState } from "recoil";
 import { paramState } from "../../store";
 const Search = () => {
   const [param, setParam] = useRecoilState(paramState);
-  console.log(param);
+
   const searchNews = (e) => {
     if (e.key == "Enter") {
       try {

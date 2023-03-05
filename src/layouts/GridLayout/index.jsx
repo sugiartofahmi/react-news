@@ -1,5 +1,9 @@
 const GridLayout = ({ children }) => {
-  return <div className="grid grid-cols-3 gap-5">{children}</div>;
+  return (
+    <div className="grid md:grid-cols-3 grid-cols-2 md:gap-5 gap-2 ">
+      {children}
+    </div>
+  );
 };
 
 export default GridLayout;
