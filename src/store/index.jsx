@@ -4,7 +4,7 @@ export const paramState = atom({
   key: "param-state",
   default: {
     apiKey: import.meta.env.VITE_API_KEY,
-    country: "id",
+    q: "indonesia",
   },
 });
 
@@ -12,13 +12,10 @@ export const fetchNews = selector({
   key: "fetch-news",
   get: async ({ get }) => {
     try {
-      const res = await axios.get(
-        `${import.meta.env.VITE_API_URL}top-headlines`,
-        {
-          params: get(paramState),
-        }
-      );
-      return res.data || {};
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}`, {
+        params: get(paramState),
+      });
+      return res.data.articles || {};
     } catch (error) {
       console.log(error);
     }
