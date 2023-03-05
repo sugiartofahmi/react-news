@@ -11,8 +11,6 @@ const Card = lazy(() => import("../../components/Card"));
 const Home = () => {
   const news = useRecoilValue(fetchNews);
 
-  console.log(news);
-
   return (
     <Suspense fallback={<Loading />}>
       <MainLayout>
