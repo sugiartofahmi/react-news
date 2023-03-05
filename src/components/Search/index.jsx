@@ -5,6 +5,7 @@ const Search = () => {
   const [param, setParam] = useRecoilState(paramState);
 
   const searchNews = (e) => {
+    e.preventDefault();
     if (e.key == "Enter") {
       try {
         setParam((prevState) => ({
