@@ -7,14 +7,9 @@ import Router from "./router";
 const App = () => {
   return (
     <Suspense fallback={<Loading />}>
-      <MainLayout>
-        <Navbar />
-        <Suspense fallback={<Loading />}>
-          <ContentLayout>
-            <Router />
-          </ContentLayout>
-        </Suspense>
-      </MainLayout>
+      <Suspense fallback={<Loading />}>
+        <Router />
+      </Suspense>
     </Suspense>
   );
 };

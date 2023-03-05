@@ -1,8 +1,6 @@
-import { lazy } from "react";
-const ContentLayout = lazy(() => import("../../layouts/ContentLayout"));
 const Loading = () => {
   return (
-    <ContentLayout>
+    <div className="flex flex-col min-w-screen min-h-screen px-5 py-5 justify-center  items-center">
       <div className="flex items-center justify-center">
         <div
           className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
@@ -13,7 +11,7 @@ const Loading = () => {
           </span>
         </div>
       </div>
-    </ContentLayout>
+    </div>
   );
 };
 
